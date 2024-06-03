@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+</head>
+<body style="background-image: url(wood.avif); align-self: center;">
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+        }
+
+        .nav-bar {
+            background-color: rgb(255, 255, 255);
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            padding: 10px 0;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            z-index: 10; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            transition: background-color 0.3s ease; 
+        }
+
+        .nav-bar.sticky {
+            background-color: #e0f2f1; 
+        }
+
+        .nav-logo {
+            display: inline-block;
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: teal;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background-color, color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #9fffcb;
+            color: #00a5cf; 
+        }
+
+        
+        @media (max-width: 768px) {
+            .nav-bar {
+                flex-direction: column;
+            }
+
+            .nav-logo {
+                margin-bottom: 10px; 
+                
+            }
+
+            .nav-links {
+                display: none; 
+            }
+
+            .nav-bar.active .nav-links {
+                display: flex; 
+                flex-direction: column;
+            }
+
+            .nav-toggle {
+                display: block;
+                width: 30px;
+                height: 30px;
+                background-color: teal;
+                cursor: pointer;
+            }
+
+            .nav-toggle:before,
+            .nav-toggle:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 5px;
+                background-color: #00a5cf;
+                margin-top: 5px;
+            }
+
+            .nav-toggle.active:before {
+                transform: rotate(-45deg); 
+            }
+
+            .nav-toggle.active:after {
+                transform: rotate(45deg); 
+            }
+        }
+</style>
+
+        <script>
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 20) {
+                    document.querySelector('.nav-bar').classList.add('sticky');
+                } else {
+                    document.querySelector('.nav-bar').classList.remove('sticky');
+                }
+            });
+        </script>
+
+</head>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-logo">
+                <img src="silhouette-of-a-needle-and-thread-for-design-clipart-or-logo-icon-vector.jpg" alt="Лого" width="100px" height="auto">
+            </div>
+            <ul class="nav-links">
+                <li><a href="Mar.html" class="nav-link">Start</a></li>
+                <li><a href="about.html" class="nav-link">About us</a></li>
+                <li><a href="contact.html" class="nav-link">Contact us</a></li>
+            </ul>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 style=" text-align: center; font-size: 200%; color: rgb(224, 184, 184)" >Ways to Contact us</h1>
+
+    <p style=" text-align: center; font-size: 200%; color: rgb(224, 184, 184) "  >To contact us you can just clock the envelope icon on the bottom of this page <br>or check out our facebook page Tailored by Mariana</p>
+    <footer style="text-align: center; font-size: 200%;">  <hr>  <p>For more info:<br><a href="mailto:hege@example.com"><img src="60543.png" width="50" height="50"></a></p></footer>
+    </body>
+</html>
